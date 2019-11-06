@@ -1,0 +1,26 @@
+{
+  "name": "codejam-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glukogall/codejam-virtual-keyboard.git"
+  },
+  "author": "Glukogall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glukogall/codejam-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/Glukogall/codejam-virtual-keyboard#readme",
+  "dependencies": {
+    "node": "^12.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}

@@ -1,0 +1,93 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.display{
+  width: 90%;
+  height: 300px;
+  margin: 20px 5%;
+}
+.generalWrapper{
+  width: 90%;
+  margin: 20px 5%;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.key{
+  background-color: olive;
+  width: 5%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.backspace{
+  background-color: olive;
+  width: 10%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.tab{
+  background-color: olive;
+  width: 10%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.Del{
+  background-color: olive;
+  width: 10%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.CapsLock, .Enter{
+  background-color: olive;
+  width: 15%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.RightShift, .LeftShift{
+  background-color: olive;
+  width: 20%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.RightCtrl, .LeftCtrl{
+  background-color: olive;
+  width: 15%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.RightAlt, .LeftAlt{
+  background-color: olive;
+  width: 11%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.Space{
+  background-color: olive;
+  width: 45%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+#wrapper5 > .key{
+  background-color: olive;
+  width: 24.5%;
+  height: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+.active{
+  background-color: darkgreen;
+ 
+}
+
