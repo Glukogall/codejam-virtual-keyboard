@@ -196,62 +196,7 @@ function setEventKey(){
         }
       }
     for (let i = 0; i<keysButtons.length; i++){
-/*      let letter = '';
-      switch (generalWrapper.keyCode){
-        case 192:
-        case 49:
-        case 50:
-        case 51:
-        case 52:
-        case 53:
-        case 54:
-        case 55:
-        case 56:
-        case 57:
-        case 48:
-        case 189:
-        case 187:
-        case 81:
-        case 87:
-        case 69:
-        case 82:
-        case 84:
-        case 89:
-        case 85:
-        case 73:
-        case 79:
-        case 80:
-        case 219:
-        case 221:
-        case 220:
-        case 65:
-        case 83:
-        case 68:
-        case 70:
-        case 71:
-        case 72:
-        case 74:
-        case 75:
-        case 76:
-        case 186:
-        case 222:
-        case 90:
-        case 88:
-        case 67:
-        case 86:
-        case 66:
-        case 78:
-        case 77:
-        case 188:
-        case 190:
-        case 191:
-          letter = keysButtons[i].textContent
-          console.log(keysButtons)
-        break;
-        case 13:
-          letter = ' ';
-          break;
-      }*/
+
       switch (keyButton){
         case 'Space':
         letter = ' ';
@@ -276,13 +221,7 @@ function setEventKey(){
         let textArea = document.getElementById('setEventKey');
         textArea.textContent = textArea.textContent+letter;
       }
-      /*if(generalWrapper.keyCode==32){
-        keysButtons[i].style.backgroundColor = '#001100';
-        console.log('KeyCode ' + generalWrapper.keyCode)
-        let textArea = document.getElementById('setEventKey');
-        keysButtons[i].style.color = '#001100';
-        return textArea.textContent = textArea.textContent+letter;
-      }*/
+     
       if(generalWrapper.keyCode == 8){
         let textArea = document.getElementById('setEventKey');
         let end = document.getElementById('setEventKey').textContent.length;
