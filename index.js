@@ -27,7 +27,7 @@ let keysEnSmall = [['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', 
 let keysLanguage = keysRuSmall;
 if (localStorage.getItem('languege')=='En'){keysLanguage = keysEnSmall}
 else {keysLanguage = keysRuSmall}
-console.log(keysLanguage);
+
 
 
 function setTextArea(){
@@ -112,7 +112,7 @@ function setKey(keys){
           let textAreaIn = document.getElementById('setEventKey');
           
           keys.target.style.backgroundColor = 'darkgreen'
-        console.log(textAreaIn.innerHTML)
+        
         let letter = ''
         switch (keys.target.innerHTML){
           case 'Space':
@@ -132,28 +132,22 @@ function setKey(keys){
           default: letter = keys.target.innerHTML;
           break;
                  }
-                 console.log(textAreaIn.textContent)
+                 
         if (letter == 'BackSpace'){
           let end = textAreaIn.textContent.length;
-          console.log(end)
           textAreaIn.textContent = textAreaIn.textContent.slice(0, end-1);
-          console.log(textAreaIn.textContent)
         }
         else if(letter == 'Del'){
           textAreaIn.textContent = textAreaIn.textContent.slice(1);;
         }
         else{textAreaIn.textContent = textAreaIn.textContent + letter;}
-         
-         console.log(textAreaIn.innerHTML)
         });
         button.addEventListener('mouseup', (keys)=>{keys.target.style.backgroundColor = 'olive'});
     }
   }
 }
 
-function setEventMouse(){
-  console.log('mouse')
-}
+
 function setEventKey(){
   
   let generalWrapper = document.getElementById('setEventKey');
@@ -163,7 +157,7 @@ function setEventKey(){
     let keyButton = generalWrapper.key;
     
     let keysButtons = document.getElementsByTagName('div');
-    console.log('generalWrapper.key '+generalWrapper.keyCode)
+
     let rightShiftOnClick = false;
     if (keyButton == 'Shift'){
       rightShiftOnClick = true;
@@ -217,7 +211,6 @@ function setEventKey(){
                }
       if(keyButton == keysButtons[i].innerHTML&&keyButton!='Enter'){
         keysButtons[i].style.backgroundColor = '#001100';
-        console.log('KeyCode ' + generalWrapper.keyCode)
         let textArea = document.getElementById('setEventKey');
         textArea.textContent = textArea.textContent+letter;
       }
@@ -225,7 +218,6 @@ function setEventKey(){
       if(generalWrapper.keyCode == 8){
         let textArea = document.getElementById('setEventKey');
         let end = document.getElementById('setEventKey').textContent.length;
-          console.log('end '+end)
           keysButtons[i].style.backgroundColor = '#001100';
         return textArea.textContent = textArea.textContent.slice(0, end-1);
       }
@@ -244,14 +236,9 @@ function setEventKey(){
         keysButtons[i].style.backgroundColor = '#001100';
         return textArea.textContent = textArea.textContent
       }
-      /*else {
-        let textArea = document.getElementById('setEventKey');
-        return textArea.textContent = textArea.textContent+letter;
-      }*/
     }
     if (keyButton == 'Alt'){
       if (rightShiftOnClick = true){
-        console.log('click')
         if(keysLanguage == keysRuSmall){
           keysLanguage = keysEnSmall;
           localStorage.setItem('languege', 'En')
@@ -261,20 +248,14 @@ function setEventKey(){
           localStorage.setItem('languege', 'Ru')
         }
         
-        console.log(keysLanguage);
       }
       let d = document.getElementsByClassName('wrapper')
-      console.log(d)
-      console.log (d.length)
       for(let i = 5; i>=0; i--){
        d[i].remove();
-        console.log(d[i])
       }
-      console.log(d)
       setWrappers();
       return setKey(keysLanguage);
     }
-    console.log(rightShiftOnClick);
     });
 }
 
@@ -291,31 +272,22 @@ function delEventKey(){
     if (keyButton == 'Shift'){
       if(localStorage.getItem('languege')=='En'){
         let d = document.getElementsByClassName('wrapper')
-      console.log(d)
-      console.log (d.length)
       for(let i = 5; i>=0; i--){
        d[i].remove();
-        console.log(d[i])
       }
-      console.log(d)
       setWrappers();
         setKey(keysEnSmall);
       }
       else{
         let d = document.getElementsByClassName('wrapper')
-      console.log(d)
-      console.log (d.length)
       for(let i = 5; i>=0; i--){
        d[i].remove();
-        console.log(d[i])
       }
-      console.log(d)
       setWrappers();
         setKey(keysRuSmall);}}
     });
 }
 
-//setLanguage(keysLanguage);
 setTextArea();
 setGeneralWrapper();
 setWrappers();
